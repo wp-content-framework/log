@@ -20,9 +20,9 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  * Class Log
  * @package WP_Framework_Log\Classes\Models
  */
-class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core\Interfaces\Hook, \WP_Framework_Core\Interfaces\Presenter {
+class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core\Interfaces\Hook, \WP_Framework_Presenter\Interfaces\Presenter {
 
-	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Core\Traits\Hook, \WP_Framework_Core\Traits\Presenter, \WP_Framework_Log\Traits\Package;
+	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Core\Traits\Hook, \WP_Framework_Presenter\Traits\Presenter, \WP_Framework_Log\Traits\Package;
 
 	/**
 	 * setup shutdown
@@ -33,6 +33,18 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 			add_action( 'shutdown', function () {
 				$this->shutdown();
 			}, 0 );
+		}
+	}
+
+	/**
+	 * setup settings
+	 */
+	/** @noinspection PhpUnusedPrivateMethodInspection */
+	private function setup_settings() {
+		if ( ! $this->is_valid() ) {
+			$this->app->setting->remove_setting( 'save___log_term' );
+			$this->app->setting->remove_setting( 'delete___log_interval' );
+			$this->app->setting->remove_setting( 'capture_shutdown_error' );
 		}
 	}
 
@@ -60,10 +72,6 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	 * @return bool
 	 */
 	public function is_valid() {
-		if ( $this->app->get_config( 'config', 'prevent_use_log' ) ) {
-			return false;
-		}
-
 		return $this->apply_filters( 'log_validity', $this->apply_filters( 'is_valid_log' ) );
 	}
 
