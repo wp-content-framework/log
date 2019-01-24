@@ -42,6 +42,7 @@ class Package_Log extends Package_Base {
 	public function get_configs() {
 		return [
 			'config',
+			'db',
 			'filter',
 			'map',
 			'setting',

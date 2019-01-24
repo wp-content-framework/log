@@ -1,6 +1,6 @@
 <?php
 /**
- * WP_Framework_Core Crons Delete Log
+ * WP_Framework_Log Crons Delete Log
  *
  * @version 0.0.1
  * @author technote-space
@@ -10,7 +10,7 @@
  * @link https://technote.space
  */
 
-namespace WP_Framework_Core\Classes\Crons\Delete;
+namespace WP_Framework_Log\Classes\Crons\Delete;
 
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
@@ -18,9 +18,11 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 
 /**
  * Class Log
- * @package WP_Framework_Core\Classes\Crons\Delete
+ * @package WP_Framework_Log\Classes\Crons\Delete
  */
-class Log extends \WP_Framework_Core\Classes\Crons\Base {
+class Log extends \WP_Framework_Cron\Classes\Crons\Base {
+
+	use \WP_Framework_Log\Traits\Package;
 
 	/**
 	 * @return int

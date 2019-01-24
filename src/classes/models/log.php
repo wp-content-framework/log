@@ -94,13 +94,20 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		}
 
 		global $wp_version;
-		$data                      = $this->get_called_info();
-		$data['message']           = is_string( $message ) ? $this->translate( $message ) : json_encode( $message );
-		$data['framework_version'] = $this->app->get_framework_version();
-		$data['plugin_version']    = $this->app->get_plugin_version();
-		$data['php_version']       = phpversion();
-		$data['wordpress_version'] = $wp_version;
-		$data['level']             = $level;
+		$data                       = $this->get_called_info();
+		$data['message']            = is_string( $message ) ? $this->translate( $message ) : json_encode( $message );
+		$data['framework_version']  = $this->app->get_framework_version();
+		$data['plugin_version']     = $this->app->get_plugin_version();
+		$data['php_version']        = phpversion();
+		$data['wordpress_version']  = $wp_version;
+		$data['level']              = $level;
+		$data['framework_packages'] = json_encode( $this->app->utility->array_combine( array_map( function ( $package ) {
+			/** @var \WP_Framework\Package_Base $package */
+			return [
+				'version' => $package->get_version(),
+				'package' => $package->get_package(),
+			];
+		}, $this->app->get_packages() ), 'package', 'version' ) );
 		if ( isset( $context ) ) {
 			$data['context'] = json_encode( $context );
 		}
