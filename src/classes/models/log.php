@@ -72,7 +72,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	 * @return bool
 	 */
 	public function is_valid() {
-		return $this->apply_filters( 'log_validity', $this->apply_filters( 'is_valid_log' ) );
+		return $this->apply_filters( 'is_valid_log' );
 	}
 
 	/**
