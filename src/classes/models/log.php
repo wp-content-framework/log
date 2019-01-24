@@ -180,7 +180,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		}
 
 		foreach ( $emails as $email ) {
-			$this->app->mail->send( $email, $message, $this->dump( $data, false ) );
+			$this->app->send_mail( $email, $message, $this->dump( $data, false ) );
 		}
 	}
 
