@@ -2,11 +2,13 @@
 /**
  * WP_Framework_Log Classes Models Log
  *
- * @version 0.0.2
+ * @version 0.0.5
  * @author technote-space
  * @since 0.0.1
- * @since 0.0.2 Fixed: prevent error if mail package is not installed (#1)
- * @since 0.0.2 Changed: simplify log validity check (#2)
+ * @since 0.0.2 Fixed: ログのメール送信動作の修正 (#1)
+ * @since 0.0.2 Changed: 有効かどうかの設定を単純化 (#2)
+ * @since 0.0.5 Improved: filter による メール送信先の追加 (#6)
+ * @since 0.0.5 Improved: array以外を指定した場合の動作改善 (#7)
  * @copyright technote-space All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
  * @link https://technote.space
@@ -156,6 +158,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 
 	/**
 	 * @since 0.0.2 #1
+	 * @since 0.0.5 #6, #7
 	 *
 	 * @param string $level
 	 * @param array $log_level
