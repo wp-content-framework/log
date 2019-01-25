@@ -167,14 +167,17 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 			return;
 		}
 
-		$level  = $log_level[ $level ];
-		$roles  = $this->app->utility->array_get( $level, 'roles' );
-		$emails = $this->app->utility->array_get( $level, 'emails' );
-
+		$level   = $log_level[ $level ];
+		$roles   = $this->app->utility->array_get( $level, 'roles', [] );
+		$emails  = $this->app->utility->array_get( $level, 'emails', [] );
+		empty( $roles ) and $roles = [];
+		empty( $emails ) and $emails = [];
 		if ( empty( $roles ) && empty( $emails ) ) {
 			return;
 		}
 
+		! is_array( $roles ) and $roles = [ $roles ];
+		! is_array( $emails ) and $emails = [ $emails ];
 		$emails = array_unique( $emails );
 		$emails = array_combine( $emails, $emails );
 		foreach ( $roles as $role ) {
