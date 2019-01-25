@@ -167,20 +167,34 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 			return;
 		}
 
-		$level  = $log_level[ $level ];
-		$roles  = $this->app->utility->array_get( $level, 'roles' );
-		$emails = $this->app->utility->array_get( $level, 'emails' );
-
-		if ( empty( $roles ) && empty( $emails ) ) {
+		$level   = $log_level[ $level ];
+		$roles   = $this->app->utility->array_get( $level, 'roles', [] );
+		$emails  = $this->app->utility->array_get( $level, 'emails', [] );
+		$filters = $this->app->utility->array_get( $level, 'filters', [] );
+		empty( $filters ) and $filters = [];
+		if ( empty( $roles ) && empty( $emails ) && empty( $filters ) ) {
 			return;
 		}
 
+		! is_array( $filters ) and $filters = [ $filters ];
 		$emails = array_unique( $emails );
 		$emails = array_combine( $emails, $emails );
 		foreach ( $roles as $role ) {
 			foreach ( get_users( [ 'role' => $role ] ) as $user ) {
 				/** @var \WP_User $user */
 				! empty( $user->user_email ) and $emails[ $user->user_email ] = $user->user_email;
+			}
+		}
+		foreach ( $filters as $filter ) {
+			$items = $this->apply_filters( $filter );
+			if ( empty( $items ) ) {
+				continue;
+			}
+			! is_array( $items ) and $items = $this->app->utility->explode( $items );
+			foreach ( $items as $item ) {
+				if ( ! empty( $item ) && is_string( $item ) && is_email( $item ) ) {
+					$emails[ $item ] = $item;
+				}
 			}
 		}
 
