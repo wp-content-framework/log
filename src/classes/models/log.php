@@ -2,7 +2,7 @@
 /**
  * WP_Framework_Log Classes Models Log
  *
- * @version 0.0.5
+ * @version 0.0.7
  * @author technote-space
  * @copyright technote-space All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
