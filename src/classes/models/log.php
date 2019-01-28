@@ -148,7 +148,10 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		if ( $this->apply_filters( 'save_log_term' ) <= 0 ) {
 			return;
 		}
-		$this->app->db->insert( '__log', $data );
+		$db = $this->app->db;
+		if ( $db ) {
+			$db->insert( '__log', $data );
+		}
 	}
 
 	/**
