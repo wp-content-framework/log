@@ -21,8 +21,6 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 class Log extends \WP_Framework_Cron\Classes\Crons\Base {
 
-	use \WP_Framework_Log\Traits\Package;
-
 	/**
 	 * @return int
 	 */
