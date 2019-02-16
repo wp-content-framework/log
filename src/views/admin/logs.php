@@ -1,8 +1,8 @@
 <?php
 /**
- * WP_Framework_Admin Views Admin Logs
+ * WP_Framework_Log Views Admin Logs
  *
- * @version 0.0.1
+ * @version 0.0.10
  * @author technote-space
  * @copyright technote-space All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
