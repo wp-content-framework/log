@@ -42,7 +42,7 @@ class Logs extends \WP_Framework_Admin\Classes\Controllers\Admin\Base {
 	 */
 	protected function get_view_args() {
 		$p     = $this->apply_filters( 'log_page_query_name', 'p' );
-		$total = $this->app->db->select_count( '__log' );
+		$total = $this->table( '__log' )->count();
 		$limit = $this->apply_filters( 'get___log_limit', 20 );
 		if ( $limit < 1 ) {
 			$limit = 1;
@@ -54,9 +54,7 @@ class Logs extends \WP_Framework_Admin\Classes\Controllers\Admin\Base {
 		$end        = $total > 0 ? min( $offset + $limit, $total ) : 0;
 
 		return [
-			'logs'       => $this->app->db->select( '__log', [], null, $limit, $offset, [
-				'created_at' => 'DESC',
-			] ),
+			'logs'       => $this->table( '__log' )->limit( $limit )->offset( $offset )->order_by_desc( 'created_at' )->get(),
 			'total'      => $total,
 			'total_page' => $total_page,
 			'page'       => $page,

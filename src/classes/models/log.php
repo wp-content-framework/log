@@ -142,16 +142,16 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	 * @param array $data
 	 */
 	private function insert_log( $level, array $log_level, array $data ) {
+		if ( ! $this->is_valid_package( 'db' ) ) {
+			return;
+		}
 		if ( empty( $log_level[ $level ]['is_valid_log'] ) ) {
 			return;
 		}
 		if ( $this->apply_filters( 'save_log_term' ) <= 0 ) {
 			return;
 		}
-		$db = $this->app->db;
-		if ( $db ) {
-			$db->insert( '__log', $data );
-		}
+		$this->table( '__log' )->insert( $data );
 	}
 
 	/**
@@ -230,18 +230,8 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	 * @return int
 	 */
 	public function delete_old_logs() {
-		$count = 0;
 		$term  = $this->apply_filters( 'save_log_term' );
-		foreach (
-			$this->app->db->select( '__log', [
-				'created_at' => [ '<', 'NOW() - INTERVAL ' . (int) $term . ' SECOND', true ],
-			] ) as $log
-		) {
-			$this->app->db->delete( '__log', [
-				'id' => $log['id'],
-			] );
-			$count ++;
-		}
+		$count = $this->table( '__log' )->where( 'created_at', '<', $this->raw( 'NOW() - INTERVAL ' . (int) $term . ' SECOND' ) )->delete();
 
 		return $count;
 	}
