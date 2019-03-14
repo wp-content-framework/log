@@ -24,6 +24,11 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Core\Traits\Hook, \WP_Framework_Presenter\Traits\Presenter, \WP_Framework_Log\Traits\Package;
 
 	/**
+	 * @var bool $_is_logging
+	 */
+	private $_is_logging = false;
+
+	/**
 	 * setup shutdown
 	 */
 	/** @noinspection PhpUnusedPrivateMethodInspection */
@@ -86,10 +91,16 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		if ( ! $this->is_valid() ) {
 			return false;
 		}
+		if ( $this->_is_logging ) {
+			return true;
+		}
+		$this->_is_logging = true;
 
 		$log_level = $this->app->get_config( 'config', 'log_level' );
 		$level     = $this->get_log_level( $level, $log_level );
 		if ( empty( $log_level[ $level ] ) ) {
+			$this->_is_logging = false;
+
 			return false;
 		}
 
@@ -114,6 +125,8 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 
 		$this->send_mail( $level, $log_level, $message, $data );
 		$this->insert_log( $level, $log_level, $data );
+
+		$this->_is_logging = false;
 
 		return true;
 	}
@@ -161,6 +174,9 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 	 * @param array $data
 	 */
 	private function send_mail( $level, array $log_level, $message, array $data ) {
+		if ( ! $this->is_valid_package( 'mail' ) ) {
+			return;
+		}
 		if ( empty( $log_level[ $level ]['is_valid_mail'] ) ) {
 			return;
 		}
