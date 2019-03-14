@@ -112,7 +112,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		$data['php_version']        = phpversion();
 		$data['wordpress_version']  = $wp_version;
 		$data['level']              = $level;
-		$data['framework_packages'] = json_encode( $this->app->utility->array_combine( array_map( function ( $package ) {
+		$data['framework_packages'] = json_encode( $this->app->array->combine( array_map( function ( $package ) {
 			/** @var \WP_Framework\Package_Base $package */
 			return [
 				'version' => $package->get_version(),
@@ -182,9 +182,9 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		}
 
 		$level   = $log_level[ $level ];
-		$roles   = $this->app->utility->array_get( $level, 'roles', [] );
-		$emails  = $this->app->utility->array_get( $level, 'emails', [] );
-		$filters = $this->app->utility->array_get( $level, 'filters', [] );
+		$roles   = $this->app->array->get( $level, 'roles', [] );
+		$emails  = $this->app->array->get( $level, 'emails', [] );
+		$filters = $this->app->array->get( $level, 'filters', [] );
 		empty( $roles ) and $roles = [];
 		empty( $emails ) and $emails = [];
 		empty( $filters ) and $filters = [];
@@ -208,7 +208,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 			if ( empty( $items ) ) {
 				continue;
 			}
-			! is_array( $items ) and $items = $this->app->utility->explode( $items );
+			! is_array( $items ) and $items = $this->app->string->explode( $items );
 			foreach ( $items as $item ) {
 				if ( ! empty( $item ) && is_string( $item ) && is_email( $item ) ) {
 					$emails[ $item ] = $item;
