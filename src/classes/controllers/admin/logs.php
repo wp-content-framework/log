@@ -54,7 +54,7 @@ class Logs extends \WP_Framework_Admin\Classes\Controllers\Admin\Base {
 		$end        = $total > 0 ? min( $offset + $limit, $total ) : 0;
 
 		return [
-			'logs'       => $this->table( '__log' )->limit( $limit )->offset( $offset )->order_by_desc( 'created_at' )->get(),
+			'logs'       => $this->table( '__log' )->limit( $limit )->offset( $offset )->order_by_desc( 'created_at' )->order_by_desc( 'id' )->get(),
 			'total'      => $total,
 			'total_page' => $total_page,
 			'page'       => $page,
