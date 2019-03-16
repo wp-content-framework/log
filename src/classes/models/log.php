@@ -104,13 +104,12 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 			return false;
 		}
 
-		global $wp_version;
 		$data                       = $this->get_called_info();
 		$data['message']            = is_string( $message ) ? $this->translate( $message ) : json_encode( $message );
 		$data['framework_version']  = $this->app->get_framework_version();
 		$data['plugin_version']     = $this->app->get_plugin_version();
 		$data['php_version']        = phpversion();
-		$data['wordpress_version']  = $wp_version;
+		$data['wordpress_version']  = $this->wp_version();
 		$data['level']              = $level;
 		$data['framework_packages'] = json_encode( $this->app->array->combine( array_map( function ( $package ) {
 			/** @var \WP_Framework\Package_Base $package */
