@@ -16,10 +16,10 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 return [
 
 	'log' => [
-		'${prefix}app_initialize'  => [
+		'${prefix}app_initialize'       => [
 			'setup_shutdown',
 		],
-		'${prefix}app_initialized' => [
+		'${prefix}post_load_admin_page' => [
 			'setup_settings',
 		],
 	],
