@@ -111,13 +111,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		$data['php_version']        = phpversion();
 		$data['wordpress_version']  = $this->wp_version();
 		$data['level']              = $level;
-		$data['framework_packages'] = json_encode( $this->app->array->combine( array_map( function ( $package ) {
-			/** @var \WP_Framework\Package_Base $package */
-			return [
-				'version' => $package->get_version(),
-				'package' => $package->get_package(),
-			];
-		}, $this->app->get_packages() ), 'package', 'version' ) );
+		$data['framework_packages'] = json_encode( $this->app->get_package_versions() );
 		if ( isset( $context ) ) {
 			$data['context'] = json_encode( $context );
 		}
