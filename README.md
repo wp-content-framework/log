@@ -38,8 +38,8 @@
 |設定値|説明|
 |---|---|
 |is_valid_log|ログが有効かどうかを設定|
-|save_log_term|ログの保存期間を設定|
-|delete_log_interval|ログ削除間隔を設定|
+|save_log_term|ログの保存期間を設定 \[default = 2592000]|
+|delete_log_interval|ログ削除間隔を設定 \[default = 86400]|
 |capture_shutdown_error|シャットダウンエラーを捕捉するかどうかを設定|
 
 # Author
