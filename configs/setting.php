@@ -23,7 +23,7 @@ return [
 					'type'    => 'bool',
 					'default' => function ( $app ) {
 						/** @var \WP_Framework $app */
-						return ! empty( $app->utility->definedv( 'WP_DEBUG' ) );
+						return $app->utility->defined( 'WP_DEBUG' );
 					},
 				],
 				'save_log_term'          => [
