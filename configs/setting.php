@@ -22,7 +22,7 @@ return [
 					'label'   => 'Whether log is valid or not.',
 					'type'    => 'bool',
 					'default' => function ( $app ) {
-						/** @var \WP_Framework $app */
+						/** @var WP_Framework $app */
 						return $app->utility->defined( 'WP_DEBUG' );
 					},
 				],
@@ -40,7 +40,7 @@ return [
 					'label'   => 'Whether to capture shutdown error.',
 					'type'    => 'bool',
 					'default' => function ( $app ) {
-						/** @var \WP_Framework $app */
+						/** @var WP_Framework $app */
 						return ! empty( $app->get_config( 'config', 'capture_shutdown_error' ) );
 					},
 				],

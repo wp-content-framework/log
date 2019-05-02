@@ -11,6 +11,12 @@
 
 namespace WP_Framework_Log\Classes\Models;
 
+use WP_Framework_Core\Traits\Hook;
+use WP_Framework_Core\Traits\Singleton;
+use WP_Framework_Log\Traits\Package;
+use WP_Framework_Presenter\Traits\Presenter;
+use WP_User;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -21,7 +27,7 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core\Interfaces\Hook, \WP_Framework_Presenter\Interfaces\Presenter {
 
-	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Core\Traits\Hook, \WP_Framework_Presenter\Traits\Presenter, \WP_Framework_Log\Traits\Package;
+	use Singleton, Hook, Presenter, Package;
 
 	/**
 	 * @var bool $_is_logging
@@ -192,7 +198,7 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		$emails = array_combine( $emails, $emails );
 		foreach ( $roles as $role ) {
 			foreach ( get_users( [ 'role' => $role ] ) as $user ) {
-				/** @var \WP_User $user */
+				/** @var WP_User $user */
 				! empty( $user->user_email ) and $emails[ $user->user_email ] = $user->user_email;
 			}
 		}
