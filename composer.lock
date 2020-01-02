@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24893f03bc288c5afa476a223c6c3a42",
+    "content-hash": "0122eb45d819854d5822787563c8ecb6",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -117,22 +117,22 @@
         },
         {
             "name": "wp-content-framework/admin",
-            "version": "v0.0.33",
+            "version": "v0.0.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/admin.git",
-                "reference": "8abc3baf465da33481e45516ad76ee187c59862d"
+                "reference": "72c31bdb046441102f1937b8666eea6b5f034a16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/admin/zipball/8abc3baf465da33481e45516ad76ee187c59862d",
-                "reference": "8abc3baf465da33481e45516ad76ee187c59862d",
+                "url": "https://api.github.com/repos/wp-content-framework/admin/zipball/72c31bdb046441102f1937b8666eea6b5f034a16",
+                "reference": "72c31bdb046441102f1937b8666eea6b5f034a16",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0",
-                "wp-content-framework/controller": "^0.0.5",
-                "wp-content-framework/view": "^0.0.9"
+                "wp-content-framework/controller": "^0.0.6",
+                "wp-content-framework/view": "^0.0.10"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
@@ -159,25 +159,32 @@
                 "framework",
                 "wordpress"
             ],
-            "time": "2019-12-30T14:39:30+00:00"
+            "time": "2020-01-02T05:05:35+00:00"
         },
         {
             "name": "wp-content-framework/controller",
-            "version": "v0.0.5",
+            "version": "v0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/controller.git",
-                "reference": "dac5215d8b2bccfbb9430eb2a2a64d9b785b43ee"
+                "reference": "16fe4a1b96b9f221106a347675380cead8b63d1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/dac5215d8b2bccfbb9430eb2a2a64d9b785b43ee",
-                "reference": "dac5215d8b2bccfbb9430eb2a2a64d9b785b43ee",
+                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/16fe4a1b96b9f221106a347675380cead8b63d1e",
+                "reference": "16fe4a1b96b9f221106a347675380cead8b63d1e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0",
-                "wp-content-framework/presenter": "~0.0.1"
+                "wp-content-framework/presenter": "^0.0.21"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpmd/phpmd": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -186,7 +193,7 @@
             ],
             "authors": [
                 {
-                    "name": "Technote",
+                    "name": "technote",
                     "email": "technote.space@gmail.com",
                     "homepage": "https://technote.space"
                 }
@@ -197,7 +204,7 @@
                 "framework",
                 "wordpress"
             ],
-            "time": "2019-05-19T14:54:13+00:00"
+            "time": "2019-12-31T19:23:39+00:00"
         },
         {
             "name": "wp-content-framework/cron",
@@ -322,21 +329,28 @@
         },
         {
             "name": "wp-content-framework/view",
-            "version": "v0.0.9",
+            "version": "v0.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/view.git",
-                "reference": "51c2fb9c87f969dd3be818bf564327755f776024"
+                "reference": "40043af88c7f4abb0ee438911e08941cca4238ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/51c2fb9c87f969dd3be818bf564327755f776024",
-                "reference": "51c2fb9c87f969dd3be818bf564327755f776024",
+                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/40043af88c7f4abb0ee438911e08941cca4238ef",
+                "reference": "40043af88c7f4abb0ee438911e08941cca4238ef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0",
-                "wp-content-framework/presenter": "~0.0.1"
+                "wp-content-framework/presenter": "^0.0.21"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpmd/phpmd": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -345,7 +359,7 @@
             ],
             "authors": [
                 {
-                    "name": "Technote",
+                    "name": "technote",
                     "email": "technote.space@gmail.com",
                     "homepage": "https://technote.space"
                 }
@@ -356,7 +370,7 @@
                 "framework",
                 "wordpress"
             ],
-            "time": "2019-05-15T16:16:33+00:00"
+            "time": "2019-12-31T19:22:47+00:00"
         }
     ],
     "packages-dev": [
