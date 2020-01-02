@@ -32,4 +32,8 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
         font-size: 1.2em;
         font-weight: bold;
     }
+
+    #<?php $instance->id();?>-main-contents .versions {
+        width: 100%;
+    }
 </style>
