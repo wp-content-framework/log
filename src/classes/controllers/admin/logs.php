@@ -2,7 +2,6 @@
 /**
  * WP_Framework_Log Classes Controller Admin Logs
  *
- * @version 0.0.16
  * @author Technote
  * @copyright Technote All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
@@ -30,7 +29,7 @@ class Logs extends Base {
 	 * @return int
 	 */
 	public function get_load_priority() {
-		return $this->app->log->is_valid() ? $this->apply_filters( 'logs_page_priority', 999 ) : - 1;
+		return $this->app->log->is_valid() ? $this->apply_filters( 'logs_page_priority', 999 ) : -1;
 	}
 
 	/**
@@ -44,14 +43,14 @@ class Logs extends Base {
 	 * @return array
 	 */
 	protected function get_view_args() {
-		$p     = $this->apply_filters( 'log_page_query_name', 'p' );
+		$query = $this->apply_filters( 'log_page_query_name', 'p' );
 		$total = $this->table( '__log' )->count();
 		$limit = $this->apply_filters( 'get___log_limit', 20 );
 		if ( $limit < 1 ) {
 			$limit = 1;
 		}
 		$total_page = max( 1, ceil( $total / $limit ) );
-		$page       = max( 1, min( $total_page, $this->app->input->get( $p, 1 ) ) );
+		$page       = max( 1, min( $total_page, $this->app->input->get( $query, 1 ) ) );
 		$offset     = ( $page - 1 ) * $limit;
 		$start      = $total > 0 ? $offset + 1 : 0;
 		$end        = $total > 0 ? min( $offset + $limit, $total ) : 0;
@@ -62,7 +61,7 @@ class Logs extends Base {
 			'total_page' => $total_page,
 			'page'       => $page,
 			'offset'     => $offset,
-			'p'          => $p,
+			'p'          => $query,
 			'start'      => $start,
 			'end'        => $end,
 		];
