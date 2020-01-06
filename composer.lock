@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0122eb45d819854d5822787563c8ecb6",
+    "content-hash": "72f8ef85a7dd89b7549e6bbc64d61dc4",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -208,20 +208,27 @@
         },
         {
             "name": "wp-content-framework/cron",
-            "version": "v0.0.12",
+            "version": "v0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/cron.git",
-                "reference": "1654d810d72e33af440ef4dd6042958ba35a480f"
+                "reference": "7fd71d2eea938213973258ba46c4c3abff283619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/1654d810d72e33af440ef4dd6042958ba35a480f",
-                "reference": "1654d810d72e33af440ef4dd6042958ba35a480f",
+                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/7fd71d2eea938213973258ba46c4c3abff283619",
+                "reference": "7fd71d2eea938213973258ba46c4c3abff283619",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1",
+                "phpmd/phpmd": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -230,7 +237,7 @@
             ],
             "authors": [
                 {
-                    "name": "Technote",
+                    "name": "technote",
                     "email": "technote.space@gmail.com",
                     "homepage": "https://technote.space"
                 }
@@ -241,7 +248,7 @@
                 "framework",
                 "wordpress"
             ],
-            "time": "2019-05-19T15:14:15+00:00"
+            "time": "2020-01-03T10:23:21+00:00"
         },
         {
             "name": "wp-content-framework/db",
