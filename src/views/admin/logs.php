@@ -53,7 +53,7 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 					<td>
 						<?php $instance->form( 'textarea', [
 							'name'       => 'packages',
-							'value'      => wp_json_encode( [
+							'value'      => $instance->app->utility->json_encode( [
 								'WordPress'                                   => $log['wordpress_version'],
 								$instance->app->is_theme ? 'Theme' : 'Plugin' => $log['plugin_version'],
 								'Framework'                                   => $log['framework_version'],
@@ -71,7 +71,7 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 						<?php if ( is_array( $packages ) && ! empty( $packages ) ): ?>
 							<?php $instance->form( 'textarea', [
 								'name'       => 'packages',
-								'value'      => wp_json_encode( $packages, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ),
+								'value'      => $instance->app->utility->json_encode( $packages, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ),
 								'class'      => 'versions',
 								'attributes' => [
 									'readonly' => 'readonly',

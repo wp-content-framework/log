@@ -112,15 +112,15 @@ class Log implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Core
 		}
 
 		$data                       = $this->get_called_info();
-		$data['message']            = is_string( $message ) ? $this->translate( $message ) : wp_json_encode( $message );
+		$data['message']            = is_string( $message ) ? $this->translate( $message ) : $this->app->utility->json_encode( $message );
 		$data['framework_version']  = $this->app->get_framework_version();
 		$data['plugin_version']     = $this->app->get_plugin_version();
 		$data['php_version']        = phpversion();
 		$data['wordpress_version']  = $this->wp_version();
 		$data['level']              = $level;
-		$data['framework_packages'] = wp_json_encode( $this->app->get_package_versions() );
+		$data['framework_packages'] = $this->app->utility->json_encode( $this->app->get_package_versions() );
 		if ( isset( $context ) ) {
-			$data['context'] = wp_json_encode( $context );
+			$data['context'] = $this->app->utility->json_encode( $context );
 		}
 
 		$this->send_mail( $level, $log_level, $message, $data );
