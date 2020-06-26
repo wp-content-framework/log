@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6fa9b4f71192ed55ae56c39519132ce",
+    "content-hash": "f025c10d6d19d1c4889ebb57fb88c82a",
     "packages": [
         {
             "name": "matthiasmullie/minify",
@@ -117,16 +117,16 @@
         },
         {
             "name": "wp-content-framework/admin",
-            "version": "v1.0.11",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/admin.git",
-                "reference": "cf7f201a76d03fe96acfc7524fb0f2d954e9725a"
+                "reference": "b2c816039acab56ee52082a157171c29ded39524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/admin/zipball/cf7f201a76d03fe96acfc7524fb0f2d954e9725a",
-                "reference": "cf7f201a76d03fe96acfc7524fb0f2d954e9725a",
+                "url": "https://api.github.com/repos/wp-content-framework/admin/zipball/b2c816039acab56ee52082a157171c29ded39524",
+                "reference": "b2c816039acab56ee52082a157171c29ded39524",
                 "shasum": ""
             },
             "require": {
@@ -165,20 +165,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-19T06:19:26+00:00"
+            "time": "2020-06-24T17:07:39+00:00"
         },
         {
             "name": "wp-content-framework/controller",
-            "version": "v1.0.11",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/controller.git",
-                "reference": "99b3f5c5b83808ff5113e19fca1fce6109ad372e"
+                "reference": "67ca9a97f56b67623f69deeec7d5da24a3bff05c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/99b3f5c5b83808ff5113e19fca1fce6109ad372e",
-                "reference": "99b3f5c5b83808ff5113e19fca1fce6109ad372e",
+                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/67ca9a97f56b67623f69deeec7d5da24a3bff05c",
+                "reference": "67ca9a97f56b67623f69deeec7d5da24a3bff05c",
                 "shasum": ""
             },
             "require": {
@@ -216,20 +216,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-21T15:13:19+00:00"
+            "time": "2020-06-23T16:31:51+00:00"
         },
         {
             "name": "wp-content-framework/cron",
-            "version": "v1.0.8",
+            "version": "v1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/cron.git",
-                "reference": "6dac270610731162977b74d3321161856dccfbb8"
+                "reference": "6787c75fbf37713a89886b893c16431bde77453a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/6dac270610731162977b74d3321161856dccfbb8",
-                "reference": "6dac270610731162977b74d3321161856dccfbb8",
+                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/6787c75fbf37713a89886b893c16431bde77453a",
+                "reference": "6787c75fbf37713a89886b893c16431bde77453a",
                 "shasum": ""
             },
             "require": {
@@ -266,20 +266,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-21T15:13:29+00:00"
+            "time": "2020-06-23T16:37:30+00:00"
         },
         {
             "name": "wp-content-framework/db",
-            "version": "v1.0.7",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/db.git",
-                "reference": "c57bc3309752fe9131f27879ddd1b737519c906a"
+                "reference": "19fe69f803bd3fa84bd776aade3fa30366862418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/db/zipball/c57bc3309752fe9131f27879ddd1b737519c906a",
-                "reference": "c57bc3309752fe9131f27879ddd1b737519c906a",
+                "url": "https://api.github.com/repos/wp-content-framework/db/zipball/19fe69f803bd3fa84bd776aade3fa30366862418",
+                "reference": "19fe69f803bd3fa84bd776aade3fa30366862418",
                 "shasum": ""
             },
             "require": {
@@ -318,20 +318,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-18T13:57:34+00:00"
+            "time": "2020-06-23T16:37:33+00:00"
         },
         {
             "name": "wp-content-framework/presenter",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/presenter.git",
-                "reference": "819d81d66304aa1cd8f0676ba16fca051d7c3caa"
+                "reference": "c1e1538565d12e21c5b173633c1f4064d9f51d0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/presenter/zipball/819d81d66304aa1cd8f0676ba16fca051d7c3caa",
-                "reference": "819d81d66304aa1cd8f0676ba16fca051d7c3caa",
+                "url": "https://api.github.com/repos/wp-content-framework/presenter/zipball/c1e1538565d12e21c5b173633c1f4064d9f51d0d",
+                "reference": "c1e1538565d12e21c5b173633c1f4064d9f51d0d",
                 "shasum": ""
             },
             "require": {
@@ -369,20 +369,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-22T17:55:21+00:00"
+            "time": "2020-06-23T16:37:49+00:00"
         },
         {
             "name": "wp-content-framework/view",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/view.git",
-                "reference": "7e15c45f77b4e61bcddafb639281bfaa15c97e47"
+                "reference": "f723ba55006210697b7ebf70f0085255359ec48c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/7e15c45f77b4e61bcddafb639281bfaa15c97e47",
-                "reference": "7e15c45f77b4e61bcddafb639281bfaa15c97e47",
+                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/f723ba55006210697b7ebf70f0085255359ec48c",
+                "reference": "f723ba55006210697b7ebf70f0085255359ec48c",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +420,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-06-21T15:13:32+00:00"
+            "time": "2020-06-23T16:37:52+00:00"
         }
     ],
     "packages-dev": [
@@ -484,22 +484,22 @@
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
-            "version": "v0.6.2",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer.git",
-                "reference": "8001af8eb107fbfcedc31a8b51e20b07d85b457a"
+                "reference": "e8d808670b8f882188368faaf1144448c169c0b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/8001af8eb107fbfcedc31a8b51e20b07d85b457a",
-                "reference": "8001af8eb107fbfcedc31a8b51e20b07d85b457a",
+                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/e8d808670b8f882188368faaf1144448c169c0b7",
+                "reference": "e8d808670b8f882188368faaf1144448c169c0b7",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0",
-                "php": "^5.3|^7",
-                "squizlabs/php_codesniffer": "^2|^3"
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3",
+                "squizlabs/php_codesniffer": "^2 || ^3 || 4.0.x-dev"
             },
             "require-dev": {
                 "composer/composer": "*",
@@ -546,7 +546,7 @@
                 "stylecheck",
                 "tests"
             ],
-            "time": "2020-01-29T20:22:20+00:00"
+            "time": "2020-06-25T14:57:39+00:00"
         },
         {
             "name": "pdepend/pdepend",
