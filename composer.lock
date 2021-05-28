@@ -195,16 +195,16 @@
         },
         {
             "name": "wp-content-framework/controller",
-            "version": "v1.0.54",
+            "version": "v1.0.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/controller.git",
-                "reference": "d4311379878ad83b87cd890fe6ac117459609bd0"
+                "reference": "5e95b295115d20f3cc32e09674b82036d89b14b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/d4311379878ad83b87cd890fe6ac117459609bd0",
-                "reference": "d4311379878ad83b87cd890fe6ac117459609bd0",
+                "url": "https://api.github.com/repos/wp-content-framework/controller/zipball/5e95b295115d20f3cc32e09674b82036d89b14b4",
+                "reference": "5e95b295115d20f3cc32e09674b82036d89b14b4",
                 "shasum": ""
             },
             "require": {
@@ -238,7 +238,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-content-framework/controller/issues",
-                "source": "https://github.com/wp-content-framework/controller/tree/v1.0.54"
+                "source": "https://github.com/wp-content-framework/controller/tree/v1.0.55"
             },
             "funding": [
                 {
@@ -246,20 +246,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-15T14:05:26+00:00"
+            "time": "2021-05-25T06:55:26+00:00"
         },
         {
             "name": "wp-content-framework/cron",
-            "version": "v1.0.40",
+            "version": "v1.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/cron.git",
-                "reference": "fcfeb102a6a765292f705f0589f98a1383747c3b"
+                "reference": "f242562926cbf5946123ba77ef5e00d221df8940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/fcfeb102a6a765292f705f0589f98a1383747c3b",
-                "reference": "fcfeb102a6a765292f705f0589f98a1383747c3b",
+                "url": "https://api.github.com/repos/wp-content-framework/cron/zipball/f242562926cbf5946123ba77ef5e00d221df8940",
+                "reference": "f242562926cbf5946123ba77ef5e00d221df8940",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-content-framework/cron/issues",
-                "source": "https://github.com/wp-content-framework/cron/tree/v1.0.40"
+                "source": "https://github.com/wp-content-framework/cron/tree/v1.0.41"
             },
             "funding": [
                 {
@@ -300,7 +300,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-07T13:42:00+00:00"
+            "time": "2021-05-21T13:32:57+00:00"
         },
         {
             "name": "wp-content-framework/db",
@@ -360,16 +360,16 @@
         },
         {
             "name": "wp-content-framework/presenter",
-            "version": "v1.0.44",
+            "version": "v1.0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/presenter.git",
-                "reference": "090c3021c4d7ea24dea5b0828d67a01ca8fca654"
+                "reference": "c03e1d1977aa7c3dee90e96d7bb203f98ed092b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/presenter/zipball/090c3021c4d7ea24dea5b0828d67a01ca8fca654",
-                "reference": "090c3021c4d7ea24dea5b0828d67a01ca8fca654",
+                "url": "https://api.github.com/repos/wp-content-framework/presenter/zipball/c03e1d1977aa7c3dee90e96d7bb203f98ed092b1",
+                "reference": "c03e1d1977aa7c3dee90e96d7bb203f98ed092b1",
                 "shasum": ""
             },
             "require": {
@@ -403,7 +403,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-content-framework/presenter/issues",
-                "source": "https://github.com/wp-content-framework/presenter/tree/v1.0.44"
+                "source": "https://github.com/wp-content-framework/presenter/tree/v1.0.45"
             },
             "funding": [
                 {
@@ -411,20 +411,20 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-17T05:25:26+00:00"
+            "time": "2021-05-25T06:54:54+00:00"
         },
         {
             "name": "wp-content-framework/view",
-            "version": "v1.0.53",
+            "version": "v1.0.54",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-content-framework/view.git",
-                "reference": "5076a453ff225828ca6de42225e78b8740d1b3f8"
+                "reference": "bcc2788f60fe845081bfb5c7332192a641868766"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/5076a453ff225828ca6de42225e78b8740d1b3f8",
-                "reference": "5076a453ff225828ca6de42225e78b8740d1b3f8",
+                "url": "https://api.github.com/repos/wp-content-framework/view/zipball/bcc2788f60fe845081bfb5c7332192a641868766",
+                "reference": "bcc2788f60fe845081bfb5c7332192a641868766",
                 "shasum": ""
             },
             "require": {
@@ -458,7 +458,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wp-content-framework/view/issues",
-                "source": "https://github.com/wp-content-framework/view/tree/v1.0.53"
+                "source": "https://github.com/wp-content-framework/view/tree/v1.0.54"
             },
             "funding": [
                 {
@@ -466,7 +466,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-05-07T13:42:03+00:00"
+            "time": "2021-05-21T13:33:01+00:00"
         }
     ],
     "packages-dev": [
@@ -1366,16 +1366,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.1",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
-                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
                 "shasum": ""
             },
             "require": {
@@ -1387,7 +1387,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.22-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1425,7 +1425,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -1441,20 +1441,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-02-19T12:13:01+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.22.1",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91"
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dc3063ba22c2a1fd2f45ed856374d79114998f91",
-                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
                 "shasum": ""
             },
             "require": {
@@ -1463,7 +1463,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.22-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1508,7 +1508,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -1524,7 +1524,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-02-19T12:13:01+00:00"
         },
         {
             "name": "symfony/service-contracts",
